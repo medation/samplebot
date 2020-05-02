@@ -1,0 +1,22 @@
+language: fr
+pipeline:
+  - name: "SpacyNLP"
+  - name: "SpacyTokenizer"
+  - name: "SpacyFeaturizer"
+  - name: "RegexFeaturizer"
+  - name: "CRFEntityExtractor"
+  - name: "EntitySynonymMapper"
+  - name: "SklearnIntentClassifier"
+    epochs: 200
+policies:
+- name: KerasPolicy
+  epochs: 500
+  featurizer:
+  - name: FullDialogueTrackerFeaturizer
+    state_featurizer:
+    - name: BinarySingleStateFeaturizer
+- name: AugmentedMemoizationPolicy
+- name: FallbackPolicy
+  nlu_threshold: 0.50
+  core_threshold: 0.50
+  fallback_action_name: action_default_fallback

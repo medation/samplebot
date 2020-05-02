@@ -1,0 +1,20 @@
+intents:
+  - greet
+  - ask_information
+  - goodbye
+
+templates:
+  utter_default:
+    - text: intent_default
+  utter_greet:
+    - text: intent_greet
+  utter_ask_information:
+    - text: intent_ask_information
+  utter_goodbye:
+    - text: intent_goodbye
+
+actions:
+  - utter_default
+  - utter_greet
+  - utter_ask_information
+  - utter_goodbye
