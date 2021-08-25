@@ -9,7 +9,7 @@ redis==3.3.5
 pymongo==3.8.0
 numpy==1.16.3
 scipy==1.2.1
-tensorflow==1.14.0
+tensorflow==2.5.1
 tensor2tensor==1.14.1 
 tensorboard==1.14.0 
 tensorflow-datasets==1.2.0 
