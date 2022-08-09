@@ -1,4 +1,4 @@
-# Covid-19 Bot
+# Sample Bot
 
 Node.js project for connecting messenger with nlu and different services.
 
